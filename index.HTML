@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Távola das Cordas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="masmorra.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manufacturing+Consent&display=swap" rel="stylesheet">
+    <link rel="icon" type="image.png" href="imagens/Logo.jpeg">
+</head>
+    <script>
+        let indice = 0;
+
+            function mudarFoto(direcao) {
+            const fotos = document.querySelectorAll(".carrossel .foto");
+
+            fotos[indice].classList.remove("ativa");
+
+            indice = (indice + direcao + fotos.length) % fotos.length;
+
+            fotos[indice].classList.add("ativa");
+            }
+    </script>
+<body>
+    <header>Távola de Cordas</header>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="#" target="_blank">🗡️Jogar🗡️</a></li>
+            <li><a href="#fotos">Fotos</a></li>
+            <li><a href="#historia">História</a></li>
+            <li><a href="#personagens">Personagens</a></li>
+            <li><a href="#htp">Como Jogar</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <h1>Bem-vindo(a) ao nosso mundo</h1>
+
+    <div class="container-botao">
+        <a href="https://youtu.be/NEcApOWJDQg?si=H3TZU0ybkTFTqLs5" target="_blank" class="botao-jogar">Jogar Agora</a>
+    </div>
+
+    <section class="fotos" id="fotos">
+        <div class="carrossel">
+    <button class="anterior" onclick="mudarFoto(-1)">&#10094;</button>
+
+    <div class="fotos">
+        <img src="imagens/Logo.jpeg" class="foto ativa" alt="Foto 1">
+        <img src="imagens/interludio.jpg" class="foto" alt="Foto 2">
+        <img src="imagens/lua final.jpg" class="foto" alt="Foto 4">
+        <img src="imagens/espada.jpeg" class="foto" alt="Foto 5">
+        <img src="imagens/luta.jpg" class="foto" alt="Foto 6">
+        <img src="imagens/ponte 1.jpg" class="foto" alt="Foto 7">
+        <img src="imagens/ponte.jpg" class="foto" alt="Foto 8">
+        <img src="imagens/final.jpg" class="foto" alt="Foto 9">
+    </div>
+
+    <button class="proximo" onclick="mudarFoto(1)">&#10095;</button>
+</div>
+    </section>
+
+     <section class="historia" id="historia">
+        <h1>História</h1>
+        <p>Entre muitas peças de teatro, o boneco que interpreta o Rei Arthur Pendragon acaba na peça de Macbeth. Sem saber que ele é apenas um boneco de madeira, Arthur explora o reino estranho em que se encontra.
+Ao descobrir que está em um lugar governado por um tirano chamado Thebcam, Arthur teme que sua esposa possa estar em perigo. Determinado a salvar a Dama Macbeth, ele faz uma viagem das florestas ao castelo e tenta convencer Macbeth a aceitar sua ajuda.
+Durante o caminho, Arthur não deixa de chamar e procurar por Merlim, que sempre costuma ajuda-lo. Eventualmente ele se depara com uma figura que acredita ser Merlim, a lua. Demora um pouco para ele perceber que a lua é na verdade uma entidade ambígua de múltiplas faces, e ainda mais para perceber que as faces não tem boas intenções.
+Dama Macbeth por sua vez, vê Arthur como um empecilho para seus planos de ser a única regente do país.</p>
+    </section>
+    <hr>
+
+    <section class="personagens" id="personagens">
+        <h1>Nossos personagens</h1>
+        
+    <div class="personagens-card">
+
+    <div class="personagem">
+        <h2>Rei Arthur ⚔</h2>
+        <p id="perso">Player</p>
+        <img src="imagens/Arthur.jpeg" alt="Rei Arthur">
+    </div>
+
+    <div class="personagem">
+        <h2>Lua</h2>
+        <p id="perso">Algo entre aliada e inimiga</p>
+        <img src="imagens/lua final.jpg" alt="Lua">
+    </div>
+
+    <div class="personagem">
+        <h2>Boss Thebcam</h2>
+        <p id="perso">Rei Vilão</p>
+        <img src="imagens/boss.jpeg" alt="Boss Thebcam">
+    </div>
+
+    <div class="personagem">
+        <h2>Inimigos</h2>
+        <p id="perso">Guardas</p>
+        <img src="imagens/inimigos.jpeg" alt="Boss Thebcam">
+    </div>
+</div>
+    </section>
+
+        <div class="imagens-card">
+            <h1>Como Jogar</h1>
+    <h2>Movimentação do personagem</h2>
+
+    <div class="imagens-container">
+        <p>Tecla A para esquerda | Tecla D para direita</p>
+        <img src="imagens/esquerda.jpg" alt="Movimentação para esquerda">
+
+        <img src="imagens/direita.jpg" alt="Movimentação para direita">
+
+    </div>
+
+    <div class="imagens-card">
+        <div class="imagens-container">
+            <p>Pular</p>
+            <img src="imagens/espaço.jpg">
+        </div>
+    </div>
+
+    <div class="imagens-card">
+        <div class="imagens-container">
+            <p>Dash</p>
+            <img src="imagens/shift.jpg">
+        </div>
+    </div>
+
+    <div class="imagens-card">
+        <div class="imagens-container">
+            <p>Atacar</p>
+            <img src="imagens/ataque.jpg">
+        </div>
+    </div>
+
+</div>
+    </div>
+
+    <footer>©️Todos os direitos reservados©️</footer>
+</body>
+</html>

@@ -1,0 +1,65 @@
+header{ text-align: center; color: #0e2c4f; font-size: 90px; font-family: "Lordish-Regular", sans-serif; }
+nav{padding: 15px; text-align: center; font-family: "Uncial Antiqua";}
+nav ul{display: flex; justify-content: center; gap: 200px; padding: 0; margin: 0;}
+nav li{display: inline-block; margin-left: 10px;}
+nav a:hover{color: #c28b65;}
+nav a{color: #6e3107; font-size: 20px;}
+body {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    background: transparent;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url("imagens/cortina.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.45;
+    z-index: -1;
+    pointer-events: none;
+}
+h1{text-align: center; font-size: 40px; color: black; font-family: "Lordish-Regular", sans-serif;}
+.historia{width: 80%; margin: 50px auto; padding: 10px; text-align: center; background-color: #e6a06f; border: 1px solid black; box-sizing: border-box;font-family: "Uncial Antiqua";}
+.carrossel {position: relative; width: 850px; max-width: 90%; height: 500px; margin: 30px auto; overflow: hidden;}
+.fotos {width: 100%; height: 100%;}
+.foto {display: none; width: 100%; height: 100%; object-fit: contain;}
+        .foto.ativa {display: block; animation: entrarFoto 1s ease;}
+        @keyframes entrarFoto {
+       from {opacity: 0; transform: translateX(40px);}
+        to {opacity: 1; transform: translateX(0);}}
+        .carrossel button {position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;}
+        .carrossel button:first-of-type {left: 10px;}
+        .carrossel button:last-of-type {right: 10px;}
+        .carrossel button {position: absolute; top: 50%; transform: translateY(-50%); z-index: 1; background-color: rgba(219, 163, 41, 0.6); color: white; border: none; padding: 12px; cursor: pointer; font-size: 20px;}
+        .anterior {left: 10px;}
+        .proximo {right: 10px;}
+        hr{border: 0; height: 5px; width: 90%; background-color: black; margin: 10px auto;}
+        .personagens-card {display: flex; justify-content: center; align-items: flex-start; gap: 40px; width: 100%; padding-bottom: 20px;}
+        .card{width: 400px; min-height: 500px; background-color: #e6a06f; border: 1px solid black; padding: 20px; box-sizing: border-box; margin: 50px auto;}
+        .personagem {width: 400px; margin: 0; margin-right: 20px;}
+        @font-face {
+        font-family: 'strassburg fraktur';
+        src: url('strassburg fraktur.ttf') format('truetype');}
+        @font-face {
+        font-family: 'Lordish-Regular';
+        src: url('fontes/Lordish-Regular.ttf') format('truetype');}
+        @font-face {
+        font-family: 'Crusades';
+        src: url('Crusades.ttf') format('truetype');}
+        @font-face {
+        font-family: 'Zenzai Itacha';
+        src: url('Zenzai Itacha.ttf') format('truetype');}
+        .botao-jogar {display: inline-block; padding: 15px 40px; background-color: #ff0000; color: white; text-decoration: none; font-size: 40px; font-weight: bold; border-radius: 8px; transition: 0.3s;}
+        .botao-jogar:hover {background-color: #05dffc; transform: scale(1.05);}
+        .container-botao {text-align: center; margin: 30px auto;}
+        footer{margin-top: 40px; padding: 15px; text-align: center; color: rgb(0, 0, 0); font-family: 'Lordish-Regular'; font-size: 20px;}
+        html {
+    min-height: 100%;
+}
